@@ -1,12 +1,12 @@
-# <span style="color:#4CAF50">Blog on Django</span>
+# 🌈 Blog on Django 🌈
 
-### <span style="color:#2196F3">Overview</span>
+### 🚀 Overview
 This project is a full-stack implementation of Django to create a simple blog featuring articles, user interactions, and comments. The aim is to familiarize oneself with Django's capabilities.
 
-### <span style="color:#FF9800">Technologies</span>
+### 🔧 Technologies
 - **Django**
 - **Python**
 - **PostgreSQL** (for the database)
   
-### <span style="color:#9C27B0">Project Tracking</span>
+### 🗂 Project Tracking
 The project progress is monitored using YouTrack.
