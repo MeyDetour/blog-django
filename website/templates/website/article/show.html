@@ -1,0 +1,13 @@
+{% extends "../base.html" %}
+{% block content %}
+<a href="/">Retour à la homme page</a>
+
+<h1>Un article</h1>
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.firstParagraphe }}</p>
+    <p>{{ article.secondParagraphe }}</p>
+    <p>{{ article.thirdParagraphe }}</p>
+
+        <a href="/article/edit/{{ article.id }}">Modify {{ article.title }}</a>
+        <a href="/article/remove/{{ article.id }}">remove {{ article.title }}</a>
+{% endblock %}
