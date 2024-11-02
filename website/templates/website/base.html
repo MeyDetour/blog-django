@@ -6,14 +6,21 @@
     <title>Title</title>
 
     <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/articles.css' %}">
 </head>
 <body>{% include "website/components/navbar.html" %}
 
-<div class="container">
+<div class="container {% if request.path == '/' %}homeContainer
+{% elif '/article/get' in  request.path %}articleContainer
+{% elif '/article/new' in  request.path %}articleNewContainer
+{% elif '/articles' ==  request.path %}articlesContainer
+{% elif '/profile' ==  request.path %}profileContainer
 
-{% block content %}
+{% endif %}  ">
 
-{% endblock %}
+    {% block content %}
+
+    {% endblock %}
 </div>
 </body>
 </html>

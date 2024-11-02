@@ -1,9 +1,39 @@
 {% extends "../base.html" %}
 {% block content %}
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
 
         {% csrf_token %}
-        {{ form }}
+         <div class="inputContainer">
+                {{ form.title.label }}
+                <div class="inputDiv">
+
+                    {{ form.title }}
+                </div>
+            </div>  <div class="inputContainer">
+                {{ form.firstParagraphe.label }}
+                <div class="inputDiv">
+
+                    {{ form.firstParagraphe }}
+                </div>
+            </div>  <div class="inputContainer">
+                {{ form.secondParagraphe.label }}
+                <div class="inputDiv">
+
+                    {{ form.secondParagraphe }}
+                </div>
+            </div>  <div class="inputContainer">
+                {{ form.thirdParagraphe.label }}
+                <div class="inputDiv">
+
+                    {{ form.thirdParagraphe }}
+                </div>
+            </div>  <div class="inputContainer">
+                {{ form.image.label }}
+                <div class="inputDiv">
+
+                    {{ form.image }}
+                </div>
+            </div>
         <input type="submit" value="Submit">
     </form>
 {% endblock %}

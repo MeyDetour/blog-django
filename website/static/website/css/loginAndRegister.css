@@ -1,0 +1,31 @@
+.loginContainer {
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.loginContainer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginContainer form > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.loginContainer .inputContainer {
+    width: 43%;
+}
+
+.loginContainer form .input {
+    width: 45%;
+}

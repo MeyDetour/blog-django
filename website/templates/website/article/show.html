@@ -1,13 +1,55 @@
 {% extends "../base.html" %}
 {% block content %}
-<a href="/">Retour à la homme page</a>
+    <div class="articleSection">
+        <div class="textes">
+            <h1>{{ article.title }}</h1>
+            <p>{{ article.firstParagraphe }}</p>
+            <p>{{ article.secondParagraphe }}</p>
+            <p>{{ article.thirdParagraphe }}</p>
+        </div>
+        {% if article.image %}
 
-<h1>Un article</h1>
-    <h1>{{ article.title }}</h1>
-    <p>{{ article.firstParagraphe }}</p>
-    <p>{{ article.secondParagraphe }}</p>
-    <p>{{ article.thirdParagraphe }}</p>
+            <img src="{{ article.image.url }}" alt="">
+        {% endif %}
+    </div>
 
-        <a href="/article/edit/{{ article.id }}">Modify {{ article.title }}</a>
-        <a href="/article/remove/{{ article.id }}">remove {{ article.title }}</a>
+
+    {% if article.author == user %}
+        <div class="buttonContainer">
+            <a href="/article/edit/{{ article.id }}" class="button1">Modify </a>
+            <a href="/article/remove/{{ article.id }}" class="button1">remove </a>
+
+        </div>
+    {% endif %}
+
+    <div class="commentSection">
+        {% for comment in article.comments.all %}
+            <div>
+               <h2> {{ comment.author.username }}</h2>
+              <p> {{ comment.content }}</p>
+
+            </div>
+
+        {% empty %}
+            No comment
+        {% endfor %}
+    </div>
+
+
+    {% if user.is_authenticated and article.author != user %}
+
+        <form method="post">
+          <span>Post comment !</span>
+            <div class="inputContainer">
+                {{ form.content.label }}
+                <div class="inputDiv">
+
+                    {{ form.content }}
+                </div>
+
+            </div>
+            {% csrf_token %}
+            <button type="submit" class="button1">Post comment !</button>
+        </form>
+    {% endif %}
 {% endblock %}

@@ -1,0 +1,34 @@
+[
+    {
+        "model": "website.article",
+        "pk": 1,
+        "fields": {
+            "title": "The Rise of Web 3.0: Transforming the Digital Landscape",
+            "firstParagraphe": "Avec l'émergence de nouvelles technologies décentralisées, le Web 3.0 est en train de redéfinir notre façon d’interagir en ligne. Construit sur des réseaux blockchain, il offre une nouvelle façon d'utiliser les applications et les plateformes en ligne.",
+            "secondParagraphe": "Les utilisateurs sont de plus en plus en contrôle de leurs données, avec des transactions plus transparentes et des interactions plus sécurisées. Ce changement s’annonce comme un pas vers un futur plus privé, démocratique, et inclusif.",
+            "thirdParagraphe": "Dans cet article, découvrez les principes fondamentaux du Web 3.0, les défis qui l’attendent, et pourquoi les experts pensent qu’il redéfinira les règles de l’Internet.",
+            "author": 1
+        }
+    },
+    {
+        "model": "website.article",
+        "pk": 2,
+        "fields": {
+            "title": "Les Avantages du Développement avec Django : Pourquoi et Comment",
+            "firstParagraphe": "Django est l’un des frameworks les plus populaires pour créer des applications web robustes et sécurisées. Son approche \"batteries included\" en fait un choix privilégié pour les développeurs souhaitant créer des applications rapides.",
+            "secondParagraphe": "Avec un large éventail d’outils, Django simplifie la gestion de bases de données, les templates dynamiques et les fonctionnalités de sécurité avancées. Sa communauté active est également un grand atout pour ceux qui cherchent du soutien ou des tutoriels.",
+            "thirdParagraphe": "Plongez dans cet article pour comprendre comment Django peut améliorer votre workflow et pourquoi il est tant apprécié des développeurs.",
+            "author": 1
+        }
+    },    {
+        "model": "website.article",
+        "pk": 3,
+        "fields": {
+            "title": "Minimalisme Numérique : Un Mode de Vie pour la Génération Connectée",
+            "firstParagraphe": "Le minimalisme numérique est une tendance de plus en plus populaire parmi ceux qui cherchent à réduire la surcharge d’informations et à reprendre le contrôle de leur temps",
+            "secondParagraphe": "Ce mode de vie encourage l’utilisation intentionnelle des technologies numériques, réduisant les distractions et favorisant une meilleure productivité et bien-être. Il s’agit d’adopter une approche plus réfléchie pour utiliser les outils numériques sans qu'ils ne dominent votre quotidien.\n\n",
+            "thirdParagraphe": "Dans cet article, découvrez les étapes simples pour intégrer le minimalisme numérique et profitez des avantages d’un mode de vie plus équilibré.",
+            "author": 1
+        }
+    }
+]

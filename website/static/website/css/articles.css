@@ -1,0 +1,89 @@
+.articlesContainer{
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding-block: 142px;
+
+}
+.articlesContainer a{
+    width: 24%;
+    height: 31vh;
+    text-decoration: none;
+    color: black;
+    margin-inline: 3%;
+    box-sizing: border-box;
+
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.articlesContainer .imageContainer{
+    width: 100%;
+
+    height: 82%;
+    position: relative;
+}
+.articlesContainer .imageContainer img{
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+.articlesContainer .imageContainer::after{
+      content: "";
+    position: absolute;
+    top: -21px;
+    right: -27px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    z-index: -1;
+}
+/*==========FOR ONE ARTICLE===========*/
+.articleContainer{
+    flex-direction: column;    gap: 70px;
+}
+.articleContainer .articleSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.articleContainer .articleSection .textes{
+
+    padding: 39px;
+    box-sizing: border-box;
+}
+.articleContainer .articleSection img{
+    width: 53%;
+    object-fit: cover;
+}
+.articleContainer .buttonContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-block: 50px;
+}
+/*===========ARTICLE NEW=============*/
+.articleNewContainer form{
+    width: 35%;
+}
+
+
+/*=====COMMENT=======*/
+.commentSection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.commentSection div{
+    width: 23%;
+        padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #d5d5d5;
+}

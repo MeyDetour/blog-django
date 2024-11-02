@@ -1,15 +1,26 @@
 {% extends "../base.html" %}
 {% block content %}
-    <a href="/article/new">CREATE ARTICLE</a>
     {% for article in articles %}
+        {% if article.image %}
 
-        <a href="/article/{{ article.id }}">
-            <h1>{{ article.title }}</h1>
-            <p>{{ article.firstParagraphe }}</p>
-            <p>{{ article.secondParagraphe }}</p>
-            <p>{{ article.thirdParagraphe }}</p>
-        </a>
+            <a href="/article/get/{{ article.id }}">
+                 <div class="imageContainer">
+                  <img src="{{ article.image.url }}" alt="">
+                 </div>
+                <span>{{ article.title }}</span>
 
+            </a>
+        {% endif %}
+    {% endfor %}
+    {% for article in articles %}
+        {% if not article.image %}
+
+            <a href="/article/edit/{{ article.id }}">
+                 <span>{{ article.title }}</span>
+                <p>{{ article.firstParagraphe }}</p>
+
+            </a>
+        {% endif %}
     {% endfor %}
 
 {% endblock %}

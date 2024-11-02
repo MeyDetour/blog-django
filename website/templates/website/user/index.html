@@ -1,0 +1,37 @@
+{% extends "../base.html" %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="inputContainer">
+                {{ form.username.label }}
+                <div class="inputDiv">
+
+                    {{ form.username }}
+                </div>
+            </div>
+            <div class="inputContainer">
+                {{ form.first_name.label }}
+                <div class="inputDiv">
+
+                    {{ form.first_name }}
+                </div>
+            </div>
+            <div class="inputContainer">
+                {{ form.last_name.label }}
+                <div class="inputDiv">
+
+                    {{ form.last_name }}
+                </div>
+            </div>
+            <div class="buttonContainer">
+                    <button type="submit" class="button1">Modifier</button>
+
+        <a href="/logout">Logout</a>
+            </div>
+
+        </form>
+
+
+    {% endif %}
+{% endblock %}
