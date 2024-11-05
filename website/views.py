@@ -94,6 +94,10 @@ def get_profile(request):
         else:
             print(form.errors)  # Débogage : affichez les erreurs dans la console
     return  render(request,"website/user/index.html",{'form':form})
+
+
+
+
 def register(request):
     if request.user.is_authenticated:
         return HttpResponseRedirect('/')

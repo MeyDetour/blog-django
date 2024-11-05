@@ -3,6 +3,8 @@ from django.db import models
 
 # Create your models here.
 
+
+
 class Article(models.Model):
     title = models.CharField(max_length=100)
     firstParagraphe = models.TextField(verbose_name="Premier Paragraphe")
@@ -10,12 +12,10 @@ class Article(models.Model):
     thirdParagraphe = models.TextField(verbose_name="Troisième Paragraphe")
     image = models.ImageField(upload_to='images/', verbose_name="Image de l'article",blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, verbose_name="Auteur")
-
+    tag = models.CharField(max_length=100, verbose_name="Tag")
 
     def __str__(self):
                 return self.title
-
-
 
 class Comment(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)

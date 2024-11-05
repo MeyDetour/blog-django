@@ -1,14 +1,15 @@
 from django import forms
 from django.contrib.auth.models import User
 
-from website.models import Article, Comment
+from website.models import Article, Comment, Category
 
 
 class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
-        fields = ["title", "firstParagraphe", "secondParagraphe", "thirdParagraphe", "image"]
+        fields = ["title", "firstParagraphe", "secondParagraphe", "thirdParagraphe", "image","tag"]
     image = forms.ImageField(required=False)
+
 
 class CommentForm(forms.ModelForm):
     class Meta:
