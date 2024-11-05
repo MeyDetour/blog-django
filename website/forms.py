@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 
-from website.models import Article, Comment, Category
+from website.models import Article, Comment
 
 
 class ArticleForm(forms.ModelForm):
