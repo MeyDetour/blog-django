@@ -19,7 +19,7 @@ class CommentForm(forms.ModelForm):
 
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=100, label="Username",widget=forms.TextInput(attrs={"placeholder": "Username"}))
-    password = forms.CharField(min_length=3, label="Pssword", widget=forms.PasswordInput(attrs={'placeholder': 'Password'}))
+    password = forms.CharField(min_length=3, label="Password", widget=forms.PasswordInput(attrs={'placeholder': 'Password'}))
 
 class UserForm(forms.ModelForm):
     username = forms.CharField(max_length=100, label="Username", min_length=2)
