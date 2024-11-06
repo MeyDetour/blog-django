@@ -29,7 +29,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['172.232.43.167','django-blog.meydetour.com']
 
-os.environ["DJANGO_SETTINGS_MODULE"] = "blog.settings"
 # Application definition
 
 INSTALLED_APPS = [
