@@ -60,7 +60,8 @@
 }
 .articleContainer .articleSection img{
     width: 53%;
-    object-fit: cover;
+    object-fit: contain;
+    max-height: 80vh;
 }
 .articleContainer .buttonContainer{
     display: flex;
