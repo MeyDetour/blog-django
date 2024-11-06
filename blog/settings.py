@@ -34,6 +34,7 @@ os.environ["DJANGO_SETTINGS_MODULE"] = "blog.settings"
 
 INSTALLED_APPS = [
     "website.apps.WebsiteConfig",
+    "blog.settings"
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
