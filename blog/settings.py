@@ -80,11 +80,11 @@ load_dotenv()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),
-        "USER":  os.getenv('DB_USER'),
-        "PASSWORD":  os.getenv('DB_PASSWORD'),
-        "HOST":  os.getenv('DB_HOST'),
-        "PORT":  os.getenv('DB_PORT'),
+        'NAME': "djangoblog",
+        "USER":  "mey",
+        "PASSWORD":  "deleteProduct",
+        "HOST":  "localhost",
+        "PORT":  5432,
     }
 }
 
@@ -125,7 +125,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS =  [os.path.join(BASE_DIR, 'static') ]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
