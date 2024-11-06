@@ -25,10 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-mzw3p=(6$5xl%2&qa)!2$*zab70w5w%t4dmjwpc#*50f_$q)ht'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['172.232.43.167','django-blog.meydetour.com']
 
+os.environ["DJANGO_SETTINGS_MODULE"] = "blog.settings"
 # Application definition
 
 INSTALLED_APPS = [
