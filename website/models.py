@@ -21,8 +21,8 @@ def get_clean_filename(instance, filename):
 class Article(models.Model):
     title = models.CharField(max_length=100)
     firstParagraphe = models.TextField(verbose_name="Premier Paragraphe")
-    secondParagraphe = models.TextField(verbose_name="Deuxième Paragraphe")
-    thirdParagraphe = models.TextField(verbose_name="Troisième Paragraphe")
+    secondParagraphe = models.TextField(verbose_name="Deuxième Paragraphe",blank=True)
+    thirdParagraphe = models.TextField(verbose_name="Troisième Paragraphe",blank=True)
     image = models.ImageField(upload_to=get_clean_filename, verbose_name="Image de l'article",blank=True,validators=[validate_image_type])
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, verbose_name="Auteur")
     tag = models.CharField(max_length=100, verbose_name="Tag")
