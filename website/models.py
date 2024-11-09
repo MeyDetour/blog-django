@@ -2,24 +2,28 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
 
-# Create your models here.
-
+import os
+import re
 
 def validate_image_type(image):
-    # Liste des extensions de fichiers d'images autorisées
     valid_extensions = ['jpg', 'jpeg', 'png', 'gif', 'webp']
     extension = image.name.split('.')[-1].lower()
 
     if extension not in valid_extensions:
         raise ValidationError(f"Invalid file type: {extension}. Only jpg, jpeg, png, gif, and webp are allowed.")
 
+def get_clean_filename(instance, filename):
+    # Supprimer les caractères spéciaux et garder le nom du fichier court
+    name, extension = os.path.splitext(filename)
+    name = re.sub(r'[^a-zA-Z0-9_-]', '', name)  # Garder uniquement des caractères sûrs
+    return f'images/{name}_{instance.id}{extension}'
 
 class Article(models.Model):
     title = models.CharField(max_length=100)
     firstParagraphe = models.TextField(verbose_name="Premier Paragraphe")
     secondParagraphe = models.TextField(verbose_name="Deuxième Paragraphe")
     thirdParagraphe = models.TextField(verbose_name="Troisième Paragraphe")
-    image = models.ImageField(upload_to='images/', verbose_name="Image de l'article",blank=True,validators=[validate_image_type])
+    image = models.ImageField(upload_to=get_clean_filename, verbose_name="Image de l'article",blank=True,validators=[validate_image_type])
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, verbose_name="Auteur")
     tag = models.CharField(max_length=100, verbose_name="Tag")
 
