@@ -1,6 +1,6 @@
 .articlesContainer{
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 
     padding-block: 142px;
